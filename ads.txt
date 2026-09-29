@@ -1,0 +1,3 @@
+# ads.txt — placeholder: no ad seller is authorised on this site yet.
+# After AdSense approval the owner replaces the example below with the real publisher ID and removes the "# ".
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
