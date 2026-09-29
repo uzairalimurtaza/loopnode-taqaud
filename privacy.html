@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
 <title>سياسة الخصوصية — حاسبة التقاعد</title>
 <meta name="description" content="ما يحدث لبياناتك في حاسبة التقاعد: الحساب داخل متصفحك ولا يُرسل شيء، وما نقوله عن سجلات الاستضافة وملفات تعريف الارتباط وإعلانات Google AdSense.">
@@ -11,6 +11,11 @@
 <meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16181c" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/plex-arabic-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plex-arabic-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plex-arabic-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plex-arabic-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <link rel="canonical" href="https://taqaud.loopnode.live/privacy.html">
 <meta property="og:type" content="website">
@@ -27,50 +32,94 @@
 <body>
 <a class="skip" href="#content">انتقل إلى المحتوى</a>
 <header class="site-header">
-<p class="brand"><a href="./">حاسبة التقاعد</a></p>
+<div class="container header-inner">
+<a class="brand" href="./" aria-label="حاسبة التقاعد — الصفحة الرئيسية"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" class="logo-bg"/><circle cx="14" cy="17" r="7" class="logo-loop"/><circle cx="21" cy="10" r="3.6" class="logo-node"/></svg><span class="wordmark"><bdi>LoopNode</bdi></span><span class="brand-tool">حاسبة التقاعد</span></a>
 <nav aria-label="أقسام الموقع"><ul><li><a href="./">الحاسبة</a></li><li><a href="./about.html">عن الموقع</a></li><li><a href="./privacy.html" aria-current="page">الخصوصية</a></li><li><a href="./contact.html">تواصل</a></li></ul></nav>
+</div>
 </header>
 <main id="content">
-<section class="card explain">
-  <h1>سياسة الخصوصية</h1>
-  <p class="fine">آخر تحديث: <bdi>29/9/2026م</bdi></p>
+<div class="page">
+<div class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="page-hero-copy">
+      <p class="eyebrow">الخصوصية</p>
+      <h1>سياسة الخصوصية</h1>
+      <p class="page-lead fine">آخر تحديث: <bdi>29/9/2026م</bdi></p>
+      <ul class="chips page-chips" aria-label="باختصار">
+        <li><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>الحساب داخل متصفحك</li>
+        <li><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>لا حسابات ولا تسجيل دخول</li>
+        <li><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>لا أدوات تحليلات</li>
+      </ul>
+    </div>
+    <svg class="page-art" viewBox="0 0 200 160" aria-hidden="true" focusable="false">
+      <circle class="pa-sun" cx="150" cy="40" r="28"/>
+      <path class="pa-card" d="M100 20 156 40v38c0 34-24 56-56 66-32-10-56-32-56-66V40z"/>
+      <rect class="pa-lock" x="78" y="76" width="44" height="36" rx="8"/>
+      <path class="pa-shackle" d="M86 76v-8a14 14 0 0 1 28 0v8"/>
+      <circle class="pa-check" cx="150" cy="122" r="20"/>
+      <path class="pa-tick" d="m141 122 7 7 11-12"/>
+    </svg>
+  </div>
+</div>
+<div class="container page-body">
+  <div class="policy-grid">
+    <section class="card explain">
+      <h2>ما تكتبه في الحاسبة</h2>
+      <p>تاريخ الميلاد ومدة الاشتراك والأجر وكل ما تدخله يُعالَج داخل متصفحك فقط. لا يُرسل إلى أي خادم، ولا يُحفظ في جهازك ولا عندنا، ويختفي عند إغلاق الصفحة. لا توجد حسابات ولا تسجيل دخول.</p>
+    </section>
+    <section class="card explain">
+      <h2>ما لا نجمعه</h2>
+      <p>لا نستخدم أدوات تحليلات، ولا نطلب اسمك أو رقم هويتك أو بياناتك لدى التأمينات، ولا نبيع أي بيانات.</p>
+    </section>
+    <section class="card explain">
+      <h2>سجلات الاستضافة</h2>
+      <p>مزوّد الاستضافة قد يحتفظ بسجلات تقنية عادية لكل زيارة (مثل عنوان IP ونوع المتصفح ووقت الطلب) لأغراض الأمان والتشغيل. هذه السجلات لا تحتوي ما تكتبه في الحاسبة، ولا نستخدمها للتعرّف عليك.</p>
+    </section>
+    <section class="card explain">
+      <h2>ملفات تعريف الارتباط (الكوكيز)</h2>
+      <p>الموقع نفسه لا يضع أي ملفات تعريف ارتباط.</p>
+    </section>
+    <section class="card explain wide">
+      <h2>الإعلانات (Google AdSense)</h2>
+      <p>قد نعرض إعلانات عبر Google AdSense لتغطية تكاليف الموقع. عند عرض الإعلانات:</p>
+      <ul>
+        <li>يستخدم مورّدو الجهات الخارجية، ومنهم Google، ملفات تعريف الارتباط لعرض الإعلانات بناءً على زياراتك السابقة لهذا الموقع أو لمواقع أخرى.</li>
+        <li>يتيح استخدام Google لملفات تعريف ارتباط الإعلانات لها ولشركائها عرض إعلانات لك بناءً على زياراتك لهذا الموقع أو لمواقع أخرى على الإنترنت.</li>
+        <li>يمكنك إيقاف الإعلانات المخصّصة من <a href="https://adssettings.google.com/" rel="noopener noreferrer">إعدادات الإعلانات لدى Google</a>، أو إيقاف ملفات تعريف الارتباط لدى مورّدين آخرين من <a href="https://www.aboutads.info/choices/" rel="noopener noreferrer">aboutads.info</a>.</li>
+        <li>لمعرفة كيف تستخدم Google البيانات في المواقع التي تعرض إعلاناتها: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">سياسة Google للمواقع الشريكة</a>.</li>
+        <li>للزوار من المناطق التي تشترط الموافقة المسبقة (مثل الاتحاد الأوروبي والمملكة المتحدة) تُعرض رسالة موافقة قبل الإعلانات المخصّصة.</li>
+      </ul>
+      <p>الإعلانات لا تصل إلى ما تكتبه في الحاسبة، لأنه لا يغادر متصفحك.</p>
+    </section>
+    <section class="card explain">
+      <h2>حقوقك</h2>
+      <p>لأننا لا نجمع بيانات شخصية عنك، لا يوجد لدينا ما نعرضه أو نحذفه. لأي سؤال عن الخصوصية <a href="./contact.html">تواصل معنا</a>.</p>
+    </section>
+    <section class="card explain">
+      <h2>تغييرات هذه السياسة</h2>
+      <p>إذا تغيّر شيء مما سبق، مثل بدء عرض الإعلانات، نحدّث هذه الصفحة وتاريخها أعلاه.</p>
+    </section>
+  </div>
+</div>
 
-  <h2>ما تكتبه في الحاسبة</h2>
-  <p>تاريخ الميلاد ومدة الاشتراك والأجر وكل ما تدخله يُعالَج داخل متصفحك فقط. لا يُرسل إلى أي خادم، ولا يُحفظ في جهازك ولا عندنا، ويختفي عند إغلاق الصفحة. لا توجد حسابات ولا تسجيل دخول.</p>
-
-  <h2>ما لا نجمعه</h2>
-  <p>لا نستخدم أدوات تحليلات، ولا نطلب اسمك أو رقم هويتك أو بياناتك لدى التأمينات، ولا نبيع أي بيانات.</p>
-
-  <h2>سجلات الاستضافة</h2>
-  <p>مزوّد الاستضافة قد يحتفظ بسجلات تقنية عادية لكل زيارة (مثل عنوان IP ونوع المتصفح ووقت الطلب) لأغراض الأمان والتشغيل. هذه السجلات لا تحتوي ما تكتبه في الحاسبة، ولا نستخدمها للتعرّف عليك.</p>
-
-  <h2>ملفات تعريف الارتباط (الكوكيز)</h2>
-  <p>الموقع نفسه لا يضع أي ملفات تعريف ارتباط.</p>
-
-  <h2>الإعلانات (Google AdSense)</h2>
-  <p>قد نعرض إعلانات عبر Google AdSense لتغطية تكاليف الموقع. عند عرض الإعلانات:</p>
-  <ul>
-    <li>يستخدم مورّدو الجهات الخارجية، ومنهم Google، ملفات تعريف الارتباط لعرض الإعلانات بناءً على زياراتك السابقة لهذا الموقع أو لمواقع أخرى.</li>
-    <li>يتيح استخدام Google لملفات تعريف ارتباط الإعلانات لها ولشركائها عرض إعلانات لك بناءً على زياراتك لهذا الموقع أو لمواقع أخرى على الإنترنت.</li>
-    <li>يمكنك إيقاف الإعلانات المخصّصة من <a href="https://adssettings.google.com/" rel="noopener noreferrer">إعدادات الإعلانات لدى Google</a>، أو إيقاف ملفات تعريف الارتباط لدى مورّدين آخرين من <a href="https://www.aboutads.info/choices/" rel="noopener noreferrer">aboutads.info</a>.</li>
-    <li>لمعرفة كيف تستخدم Google البيانات في المواقع التي تعرض إعلاناتها: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">سياسة Google للمواقع الشريكة</a>.</li>
-    <li>للزوار من المناطق التي تشترط الموافقة المسبقة (مثل الاتحاد الأوروبي والمملكة المتحدة) تُعرض رسالة موافقة قبل الإعلانات المخصّصة.</li>
-  </ul>
-  <p>الإعلانات لا تصل إلى ما تكتبه في الحاسبة، لأنه لا يغادر متصفحك.</p>
-
-  <h2>حقوقك</h2>
-  <p>لأننا لا نجمع بيانات شخصية عنك، لا يوجد لدينا ما نعرضه أو نحذفه. لأي سؤال عن الخصوصية <a href="./contact.html">تواصل معنا</a>.</p>
-
-  <h2>تغييرات هذه السياسة</h2>
-  <p>إذا تغيّر شيء مما سبق، مثل بدء عرض الإعلانات، نحدّث هذه الصفحة وتاريخها أعلاه.</p>
-</section>
-
+</div>
 </main>
 <footer class="site-footer">
+<div class="container footer-grid">
+<div class="footer-about">
+<p class="footer-brand"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" class="logo-bg"/><circle cx="14" cy="17" r="7" class="logo-loop"/><circle cx="21" cy="10" r="3.6" class="logo-node"/></svg><span><bdi>LoopNode</bdi> · حاسبة التقاعد</span></p>
 <p>موقع مستقل غير تابع للمؤسسة العامة للتأمينات الاجتماعية ولا لأي جهة حكومية. النتائج تقديرية للمساعدة على الفهم فقط.</p>
-<p>آخر تحقق من المصادر الرسمية: <bdi>29/9/2026م</bdi>.</p>
-<p>من أدوات <a href="https://loopnode.live/" rel="noopener"><bdi>LoopNode</bdi></a> المستقلة.</p>
+<p class="footer-checked">آخر تحقق من المصادر الرسمية: <bdi>29/9/2026م</bdi>.</p>
+</div>
+<div class="footer-nav">
 <p class="footer-links"><a href="./about.html">عن الموقع</a> · <a href="./privacy.html">سياسة الخصوصية</a> · <a href="./contact.html">تواصل معنا</a></p>
+<p>من أدوات <a href="https://loopnode.live/" rel="noopener"><bdi>LoopNode</bdi></a> المستقلة.</p>
+</div>
+</div>
+<div class="container footer-base">
+<p class="copy">© 2026 <bdi>LoopNode</bdi> · <a href="mailto:uamurtaza.apps@gmail.com"><bdi>uamurtaza.apps@gmail.com</bdi></a></p>
+<a class="footer-top" href="#content">إلى أعلى الصفحة ↑</a>
+</div>
 </footer>
 </body>
 </html>

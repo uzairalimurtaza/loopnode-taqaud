@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
 <title>تواصل معنا — حاسبة التقاعد</title>
 <meta name="description" content="راسلنا لتصحيح خطأ أو اقتراح تحسين في حاسبة التقاعد. للاستفسار عن سجلك أو معاشك الفعلي تواصل مع التأمينات الاجتماعية عبر قنواتها الرسمية.">
@@ -11,6 +11,11 @@
 <meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16181c" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/plex-arabic-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plex-arabic-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plex-arabic-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plex-arabic-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 <link rel="canonical" href="https://taqaud.loopnode.live/contact.html">
 <meta property="og:type" content="website">
@@ -27,23 +32,60 @@
 <body>
 <a class="skip" href="#content">انتقل إلى المحتوى</a>
 <header class="site-header">
-<p class="brand"><a href="./">حاسبة التقاعد</a></p>
+<div class="container header-inner">
+<a class="brand" href="./" aria-label="حاسبة التقاعد — الصفحة الرئيسية"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" class="logo-bg"/><circle cx="14" cy="17" r="7" class="logo-loop"/><circle cx="21" cy="10" r="3.6" class="logo-node"/></svg><span class="wordmark"><bdi>LoopNode</bdi></span><span class="brand-tool">حاسبة التقاعد</span></a>
 <nav aria-label="أقسام الموقع"><ul><li><a href="./">الحاسبة</a></li><li><a href="./about.html">عن الموقع</a></li><li><a href="./privacy.html">الخصوصية</a></li><li><a href="./contact.html" aria-current="page">تواصل</a></li></ul></nav>
+</div>
 </header>
 <main id="content">
-<section class="card explain">
-  <h1>تواصل معنا</h1>
-  <p>لتصحيح خطأ في الحاسبة أو في شرح القواعد، أو لاقتراح تحسين، راسلنا على: <a href="mailto:uamurtaza.apps@gmail.com"><bdi>uamurtaza.apps@gmail.com</bdi></a></p>
-  <p>عند الإبلاغ عن خطأ، اذكر ما أدخلته في الحاسبة، والنتيجة التي ظهرت، والنتيجة التي تتوقعها ومصدرها الرسمي إن وُجد. لا ترسل رقم هويتك أو أي بيانات لا نحتاجها.</p>
-  <p class="notice" role="note">لا نستطيع الإجابة عن حالتك الشخصية أو سجلك لدى التأمينات، ولسنا جهة تابعة لها. للاستفسار عن معاشك الفعلي تواصل مع التأمينات الاجتماعية عبر قنواتها الرسمية.</p>
-</section>
+<div class="page">
+<div class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="page-hero-copy">
+      <p class="eyebrow">تواصل</p>
+      <h1>تواصل معنا</h1>
+      <p class="page-lead">لتصحيح خطأ في الحاسبة أو في شرح القواعد، أو لاقتراح تحسين، راسلنا على: <a href="mailto:uamurtaza.apps@gmail.com"><bdi>uamurtaza.apps@gmail.com</bdi></a></p>
+    </div>
+    <svg class="page-art" viewBox="0 0 200 160" aria-hidden="true" focusable="false">
+      <circle class="pa-sun" cx="156" cy="40" r="26"/>
+      <rect class="pa-card" x="24" y="44" width="136" height="92" rx="16"/>
+      <path class="pa-flap" d="m28 50 64 48 64-48"/>
+      <circle class="pa-check" cx="152" cy="124" r="20"/>
+      <path class="pa-tick" d="m143 124 7 7 11-12"/>
+    </svg>
+  </div>
+</div>
+<div class="container page-body">
+  <div class="page-grid">
+    <div class="card explain">
+      <span class="explain-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+      <p>عند الإبلاغ عن خطأ، اذكر ما أدخلته في الحاسبة، والنتيجة التي ظهرت، والنتيجة التي تتوقعها ومصدرها الرسمي إن وُجد. لا ترسل رقم هويتك أو أي بيانات لا نحتاجها.</p>
+    </div>
+    <div class="card explain">
+      <span class="explain-icon explain-icon-warn" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></span>
+      <p class="notice" role="note">لا نستطيع الإجابة عن حالتك الشخصية أو سجلك لدى التأمينات، ولسنا جهة تابعة لها. للاستفسار عن معاشك الفعلي تواصل مع التأمينات الاجتماعية عبر قنواتها الرسمية.</p>
+    </div>
+  </div>
+</div>
 
+</div>
 </main>
 <footer class="site-footer">
+<div class="container footer-grid">
+<div class="footer-about">
+<p class="footer-brand"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" class="logo-bg"/><circle cx="14" cy="17" r="7" class="logo-loop"/><circle cx="21" cy="10" r="3.6" class="logo-node"/></svg><span><bdi>LoopNode</bdi> · حاسبة التقاعد</span></p>
 <p>موقع مستقل غير تابع للمؤسسة العامة للتأمينات الاجتماعية ولا لأي جهة حكومية. النتائج تقديرية للمساعدة على الفهم فقط.</p>
-<p>آخر تحقق من المصادر الرسمية: <bdi>29/9/2026م</bdi>.</p>
-<p>من أدوات <a href="https://loopnode.live/" rel="noopener"><bdi>LoopNode</bdi></a> المستقلة.</p>
+<p class="footer-checked">آخر تحقق من المصادر الرسمية: <bdi>29/9/2026م</bdi>.</p>
+</div>
+<div class="footer-nav">
 <p class="footer-links"><a href="./about.html">عن الموقع</a> · <a href="./privacy.html">سياسة الخصوصية</a> · <a href="./contact.html">تواصل معنا</a></p>
+<p>من أدوات <a href="https://loopnode.live/" rel="noopener"><bdi>LoopNode</bdi></a> المستقلة.</p>
+</div>
+</div>
+<div class="container footer-base">
+<p class="copy">© 2026 <bdi>LoopNode</bdi> · <a href="mailto:uamurtaza.apps@gmail.com"><bdi>uamurtaza.apps@gmail.com</bdi></a></p>
+<a class="footer-top" href="#content">إلى أعلى الصفحة ↑</a>
+</div>
 </footer>
 </body>
 </html>
