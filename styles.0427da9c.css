@@ -3664,3 +3664,116 @@ fieldset.has-error,
     align-items: stretch;
   }
 }
+
+/* ---------- Red team (2026-09-30) ---------- */
+/* #7 ad slots stay in the markup (reserved height for when ads go live, CLS 0) but are hidden until real ad code
+   exists: an empty «إعلان» box reads as an unfinished page. Going live = add class "is-live" to each slot. */
+.ad-slot:not(.is-live) {
+  display: none;
+}
+/* #5 the result says when the retirement date has already passed */
+.reached {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgb(255 255 255 / 0.1);
+  color: var(--hero-ink);
+  font-weight: 600;
+  font-size: 15px;
+}
+.reached .icon {
+  margin-top: 3px;
+  color: var(--v2-gold);
+}
+/* #6 the sector line inside the result */
+.scope {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+.scope .icon {
+  margin-top: 3px;
+  color: var(--muted);
+}
+/* #8 no JavaScript: say so at the form */
+.noscript-note {
+  margin: 12px 10px 4px;
+}
+/* LOW dark mode: the official-example sum on its 10% white chip was 4.39:1 → a lighter mint */
+@media (prefers-color-scheme: dark) {
+  #how .callout .eq {
+    color: #6ff0cc;
+  }
+}
+/* SHOULD 280–359px: the three hero chips wrap instead of forcing the row wider than the screen */
+@media (max-width: 359px) {
+  .hero.v2 .chips {
+    flex-wrap: wrap;
+  }
+  .hero.v2 .chips li {
+    white-space: normal;
+  }
+  .hero.v2 h1 {
+    font-size: 24px;
+  }
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* SHOULD print: the steps open without the 'rise' animation (it starts at opacity 0 → an empty box in the PDF), and
+   the result header prints dark on white */
+@media print {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .result-hero .headline-label,
+  .result-hero .headline-sub,
+  .result-hero .headline,
+  .result-hero .result-top h2,
+  .result-hero .reached {
+    color: #000000;
+  }
+  .result-hero::after {
+    display: none;
+  }
+}
+/* SHOULD 280–359px: the header's links wrap onto their own row under the falcon + name */
+@media (max-width: 359px) {
+  .header-inner {
+    flex-wrap: wrap;
+    row-gap: 2px;
+    padding-block: 6px;
+  }
+  .site-header nav {
+    width: 100%;
+  }
+  .site-header nav a {
+    padding: 0 6px;
+    font-size: 13.5px;
+  }
+}
+/* #3 follow-up: without maxlength a stepper value can have 3 digits («215») — give the box the room on phones */
+@media (max-width: 480px) {
+  .widget .stepper {
+    grid-template-columns: 36px minmax(0, 1fr) 36px;
+    gap: 3px;
+  }
+  .widget .stepper input {
+    padding-inline: 4px;
+  }
+}

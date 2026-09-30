@@ -19,8 +19,8 @@
 <link rel="preload" href="fonts/plex-arabic-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/plex-arabic-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css">
-<script type="module" src="app.js"></script>
+<link rel="stylesheet" href="styles.0427da9c.css">
+<script type="module" src="app.905b78fd.js"></script>
 <link rel="canonical" href="https://taqaud.loopnode.live/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ar_SA">
@@ -85,6 +85,7 @@
         <p class="preview-sub" id="preview-sub">أدخل بياناتك واضغط «احسب»</p>
         <a class="preview-more" id="preview-more" href="#result" hidden>التفاصيل والخطوات ↓</a>
       </div>
+    <noscript><p class="noscript-note alert alert-warn">تحتاج الحاسبة إلى تفعيل JavaScript في متصفحك: الحساب كله يجري داخل جهازك ولا يُرسل شيء. بقية الصفحة — الجداول الرسمية والشرح والأمثلة — تعمل بدونه.</p></noscript>
     <form id="calc" class="card form-card" method="dialog" novalidate aria-describedby="calc-help">
       <div class="card-head">
         <h2>بياناتك</h2>
@@ -101,17 +102,17 @@
         <fieldset id="dob-g-wrap" class="subgroup" aria-describedby="dob-g-hint">
           <legend class="sub-label vh">تاريخ الميلاد (ميلادي)</legend>
           <div class="field-row three">
-            <div class="field"><label for="g-d">اليوم</label><input id="g-d" inputmode="numeric" pattern="[0-9]*" maxlength="2" dir="ltr"></div>
-            <div class="field"><label for="g-m">الشهر</label><input id="g-m" inputmode="numeric" pattern="[0-9]*" maxlength="2" dir="ltr"></div>
-            <div class="field"><label for="g-y">السنة</label><input id="g-y" inputmode="numeric" pattern="[0-9]*" maxlength="4" dir="ltr"></div>
+            <div class="field"><label for="g-d">اليوم</label><input id="g-d" inputmode="numeric" pattern="[0-9]*" dir="ltr"></div>
+            <div class="field"><label for="g-m">الشهر</label><input id="g-m" inputmode="numeric" pattern="[0-9]*" dir="ltr"></div>
+            <div class="field"><label for="g-y">السنة</label><input id="g-y" inputmode="numeric" pattern="[0-9]*" dir="ltr"></div>
           </div>
           <p id="dob-g-hint" class="hint">اليوم / الشهر / السنة بالتقويم الميلادي، مثل <bdi dir="ltr" class="nowrap">10 / 3 / 1985</bdi>.</p>
         </fieldset>
         <div id="dob-h-wrap" hidden>
           <div class="field-row three">
-            <div class="field"><label for="hijri-d">اليوم</label><input id="hijri-d" inputmode="numeric" pattern="[0-9]*" maxlength="2" dir="ltr"></div>
-            <div class="field"><label for="hijri-m">الشهر</label><input id="hijri-m" inputmode="numeric" pattern="[0-9]*" maxlength="2" dir="ltr"></div>
-            <div class="field"><label for="hijri-y">السنة الهجرية</label><input id="hijri-y" inputmode="numeric" pattern="[0-9]*" maxlength="4" dir="ltr"></div>
+            <div class="field"><label for="hijri-d">اليوم</label><input id="hijri-d" inputmode="numeric" pattern="[0-9]*" dir="ltr"></div>
+            <div class="field"><label for="hijri-m">الشهر</label><input id="hijri-m" inputmode="numeric" pattern="[0-9]*" dir="ltr"></div>
+            <div class="field"><label for="hijri-y">السنة الهجرية</label><input id="hijri-y" inputmode="numeric" pattern="[0-9]*" dir="ltr"></div>
           </div>
           <p class="hint">تقويم أم القرى، مثل <bdi dir="ltr" class="nowrap">1 / 7 / 1405</bdi>.</p>
         </div>
@@ -129,7 +130,7 @@
               <label for="m-years">سنوات</label>
               <div class="stepper">
                 <button type="button" class="step" data-step-for="m-years" data-delta="-1" aria-label="إنقاص السنوات">−</button>
-                <input id="m-years" inputmode="numeric" pattern="[0-9]*" maxlength="2" dir="ltr" aria-describedby="months-help">
+                <input id="m-years" inputmode="numeric" pattern="[0-9]*" dir="ltr" aria-describedby="months-help">
                 <button type="button" class="step" data-step-for="m-years" data-delta="1" aria-label="زيادة السنوات">+</button>
               </div>
             </div>
@@ -137,7 +138,7 @@
               <label for="m-months">أشهر</label>
               <div class="stepper">
                 <button type="button" class="step" data-step-for="m-months" data-delta="-1" aria-label="إنقاص الأشهر">−</button>
-                <input id="m-months" inputmode="numeric" pattern="[0-9]*" maxlength="2" dir="ltr" aria-describedby="months-help">
+                <input id="m-months" inputmode="numeric" pattern="[0-9]*" dir="ltr" aria-describedby="months-help">
                 <button type="button" class="step" data-step-for="m-months" data-delta="1" aria-label="زيادة الأشهر">+</button>
               </div>
             </div>
@@ -280,7 +281,7 @@
       <h2 class="section-title">ما الذي تغيّر في <bdi>3/7/2024م</bdi>؟</h2>
       <p>في <bdi>27/12/1445هـ</bdi> الموافق <bdi>3/7/2024م</bdi> بدأ العمل بتعديلات على نظامي التقاعد المدني والتأمينات الاجتماعية الحاليين، وبنظام جديد للتأمينات الاجتماعية للملتحقين الجدد بالعمل. فانقسم المشتركون إلى ثلاث فئات، لكل منها سن تقاعد ومدة تقاعد مبكر مختلفة:</p>
       <p class="alert alert-neutral"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg><span>انتبه: التصنيف يعتمد على المدد التي لم يُصرف عنها تعويض فقط. فمن لديه 18 سنة اشتراك و3 سنوات أخرى سبق أن تعوّض عنها يُصنَّف على أساس 18 سنة، لا 21.</span></p>
-      <p class="source">المصدر: <a href="https://awareness.gosi.gov.sa/journey1.html" rel="noopener noreferrer">المنصة التوعوية — غير المشمولين بالتعديلات</a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
+      <p class="source">المصدر: <a href="https://awareness.gosi.gov.sa/journey1.html" rel="noopener noreferrer" target="_blank">المنصة التوعوية — غير المشمولين بالتعديلات<span class="vh"> (تُفتح في نافذة جديدة)</span></a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
     </div>
     <ul class="groups">
       <li class="g-exempt"><span class="group-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span><p><strong>غير المشمولين بالتعديلات:</strong> من بلغ 50 سنة هجرية يومها (ويُعدّ في حكمه من بلغ 48 سنة و6 أشهر ميلادية)، أو كان لديه 240 شهر اشتراك فأكثر مهما كان عمره. يبقى سن تقاعدهم 60 سنة هجرية، والتقاعد المبكر بعد 300 شهر.</p></li>
@@ -326,7 +327,7 @@
 <tr data-row="20"><td>(29) سنة فأكثر، وأقل من (30)</td><td>64 سنة ميلادية و 8 أشهر</td></tr>
 <tr data-row="21"><td>أقل من 29 سنة ميلادية</td><td>65 سنة ميلادية</td></tr>
 </tbody></table></div>
-<p class="source" data-for="age-table">المصدر: <a href="https://awareness.gosi.gov.sa/journey4.html" rel="noopener noreferrer">المنصة التوعوية للتأمينات الاجتماعية — المشمولون بالتعديلات</a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
+<p class="source" data-for="age-table">المصدر: <a href="https://awareness.gosi.gov.sa/journey4.html" rel="noopener noreferrer" target="_blank">المنصة التوعوية للتأمينات الاجتماعية — المشمولون بالتعديلات<span class="vh"> (تُفتح في نافذة جديدة)</span></a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
 </div>
       <div class="table-card">
 <div class="table-card-head"><span class="tc-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 3v18h18M7 14l4-4 4 4 5-6"/></svg></span><div><h3>التدرج في المدة اللازمة للتقاعد المبكر</h3><p class="tc-tag">للمشمولين بالتعديلات · 7 صفوف من الجدول الرسمي</p></div></div>
@@ -343,7 +344,7 @@
 <tr data-row="6"><td>179 شهراً وأقل</td><td>30 سنة (360) شهراً</td></tr>
 </tbody></table></div>
 <p class="fine">*يلزم على المشترك أن يكمل المدة التي يتطلبها النظام الأخير للحصول على معاش التقاعد المبكر، باستثناء حالات ضم المدد بين النظامين بسبب التحول أو التخصيص.</p>
-<p class="source" data-for="early-table">المصدر: <a href="https://awareness.gosi.gov.sa/journey4.html" rel="noopener noreferrer">المنصة التوعوية للتأمينات الاجتماعية — المشمولون بالتعديلات</a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
+<p class="source" data-for="early-table">المصدر: <a href="https://awareness.gosi.gov.sa/journey4.html" rel="noopener noreferrer" target="_blank">المنصة التوعوية للتأمينات الاجتماعية — المشمولون بالتعديلات<span class="vh"> (تُفتح في نافذة جديدة)</span></a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
 </div>
     </div>
   </div>
@@ -390,20 +391,21 @@
     <div class="callout">
       <p>مثال رسمي من التأمينات: متوسط أجر 10,000 ريال، 72 شهراً قبل 1422هـ و48 بعدها، ويعول 3، والمعاش بالريال:</p>
       <p><span dir="ltr" class="eq">1,200 + 240 + 1,000 = 2,440</span></p>
-      <p class="source">المصدر: <a href="https://www.gosi.gov.sa/GOSIOnline/Annuity" rel="noopener noreferrer">التأمينات الاجتماعية — المعاشات (مثال رسمي)</a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
+      <p class="source">المصدر: <a href="https://www.gosi.gov.sa/GOSIOnline/Annuity" rel="noopener noreferrer" target="_blank">التأمينات الاجتماعية — المعاشات (مثال رسمي)<span class="vh"> (تُفتح في نافذة جديدة)</span></a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
     </div>
-    <p class="source">المصدر: <a href="https://www.gosi.gov.sa/GOSIOnline/FAQ_Contributor" rel="noopener noreferrer">التأمينات الاجتماعية — الأسئلة الشائعة للمشتركين</a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
+    <p class="source">المصدر: <a href="https://www.gosi.gov.sa/GOSIOnline/FAQ_Contributor" rel="noopener noreferrer" target="_blank">التأمينات الاجتماعية — الأسئلة الشائعة للمشتركين<span class="vh"> (تُفتح في نافذة جديدة)</span></a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
     <div class="law-grid">
       <div class="law-card">
         <h3>غير المشمولين بالتعديلات</h3>
         <p>من بلغ 50 سنة هجرية أو كان لديه 240 شهر اشتراك فأكثر يوم <bdi>3/7/2024م</bdi>: سن التقاعد 60 سنة <strong>هجرية</strong>، والتقاعد المبكر بعد 300 شهر.</p>
-        <p class="source">المصدر: <a href="https://awareness.gosi.gov.sa/journey1.html" rel="noopener noreferrer">المنصة التوعوية — غير المشمولين بالتعديلات</a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
+        <p class="source">المصدر: <a href="https://awareness.gosi.gov.sa/journey1.html" rel="noopener noreferrer" target="_blank">المنصة التوعوية — غير المشمولين بالتعديلات<span class="vh"> (تُفتح في نافذة جديدة)</span></a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
       </div>
       <div class="law-card">
         <h3>الملتحقون الجدد (النظام الجديد 1445هـ)</h3>
         <p>من ليس لديه أي اشتراك سابق: سن التقاعد 65 سنة ميلادية، ويمكن التقاعد قبلها بعشر سنوات عند توافر 360 شهر اشتراك مع خصم على المعاش. المعاش = 2.25% × متوسط أعلى أجور 180 شهراً × عدد الأشهر ÷ 12.</p>
-        <p class="alert alert-warn"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg><span><strong>نسبة خصم التقاعد المبكر في النظام الجديد غير معروضة هنا:</strong> لم نتحقق منها من نص رسمي بعد، وسنضيفها حين نتحقق منها.</span></p>
-        <p class="source">المصدر: <a href="https://awareness.gosi.gov.sa/journey3.html" rel="noopener noreferrer">المنصة التوعوية — المشمولون في النظام الجديد</a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
+        <p class="alert alert-warn"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg><span><strong>خصم التقاعد المبكر في النظام الجديد:</strong> 3% عن كل 12 شهراً تسبق سن 65 أو تقل فيها مدة الاشتراك عن 480 شهراً، أيهما أقل (المادة 17 من النظام). الحاسبة تعرض المعاش عند 65 ولا تحسب المبلغ المخفّض.</span></p>
+        <p class="source">المصدر: <a href="https://awareness.gosi.gov.sa/journey3.html" rel="noopener noreferrer" target="_blank">المنصة التوعوية — المشمولون في النظام الجديد<span class="vh"> (تُفتح في نافذة جديدة)</span></a> · <span class="checked">تاريخ التحقق: <bdi>29/9/2026م</bdi></span></p>
+        <p class="source">المصدر: <a href="https://beta.gosi.gov.sa/ar/new-system" rel="noopener noreferrer" target="_blank">التأمينات الاجتماعية — نظام التأمينات الاجتماعية 1445هـ (المادة 17)<span class="vh"> (تُفتح في نافذة جديدة)</span></a> · <span class="checked">تاريخ التحقق: <bdi>30/9/2026م</bdi></span></p>
       </div>
     </div>
   </div>
@@ -471,7 +473,7 @@
         <li>إذا انخفض متوسط أجرك في آخر سنتين 10% أو أكثر عن سنة سابقة، يُحسب المعاش بأسلوب الشرائح — الحاسبة لا تطبّقه.</li>
         <li>لا يتجاوز متوسط الأجر المعتمد 150% من أجرك في بداية آخر خمس سنوات (مع استثناءات).</li>
         <li>ضم المدد بين نظامي التقاعد المدني والتأمينات، والمدد الاعتبارية، والعجز والوفاة: خارج نطاق هذه الحاسبة.</li>
-        <li>نسبة الخصم على التقاعد المبكر في النظام الجديد لم نجدها في مصدر رسمي متاح، فلا نعرض مبلغاً مخفّضاً.</li>
+        <li>المعاش المخفّض عند التقاعد المبكر في النظام الجديد: الحاسبة تعرض المعاش عند 65 فقط، ولا تحسب خصم الـ 3% عن كل سنة.</li>
       </ul>
     </div>
   </div>
