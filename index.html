@@ -11,6 +11,9 @@
 <meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16181c" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="fonts/plex-arabic-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/plex-arabic-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/plex-arabic-600.woff2" as="font" type="font/woff2" crossorigin>
@@ -36,7 +39,7 @@
 <a class="skip" href="#content">انتقل إلى المحتوى</a>
 <header class="site-header">
 <div class="container header-inner">
-<a class="brand" href="./" aria-label="حاسبة التقاعد — الصفحة الرئيسية"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" class="logo-bg"/><circle cx="14" cy="17" r="7" class="logo-loop"/><circle cx="21" cy="10" r="3.6" class="logo-node"/></svg><span class="wordmark"><bdi>LoopNode</bdi></span><span class="brand-tool">حاسبة التقاعد</span></a>
+<a class="brand" href="./" aria-label="حاسبة التقاعد — الصفحة الرئيسية"><img class="brand-icon" src="img/taqaud.svg" width="32" height="32" alt="شعار حاسبة التقاعد: صقر"><span class="brand-tool">حاسبة التقاعد</span></a>
 <nav aria-label="أقسام الموقع"><ul><li><a href="./" aria-current="page">الحاسبة</a></li><li><a href="./about.html">عن الموقع</a></li><li><a href="./privacy.html">الخصوصية</a></li><li><a href="./contact.html">تواصل</a></li></ul></nav>
 </div>
 </header>
@@ -78,7 +81,7 @@
     <div class="widget">
       <div class="preview" id="preview" aria-live="polite">
         <p class="preview-label">تاريخ بلوغ سن التقاعد النظامي</p>
-        <p class="preview-date" data-testid="ret-date"><span class="preview-empty">—/—/——</span></p>
+        <p class="preview-date" data-testid="ret-date"><span class="preview-empty" dir="ltr">—/—/——</span></p>
         <p class="preview-sub" id="preview-sub">أدخل بياناتك واضغط «احسب»</p>
         <a class="preview-more" id="preview-more" href="#result" hidden>التفاصيل والخطوات ↓</a>
       </div>
@@ -420,7 +423,7 @@
 <div class="faq-list">
 <details class="qa">
 <summary><h3>كيف أحسب راتبي التقاعدي بالضبط؟</h3><svg class="icon chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary>
-<div class="qa-body"><p>في النظام الحالي يُقسم اشتراكك إلى جزأين. الأشهر قبل 1/1/1422هـ تُضرب في متوسط أجرك في آخر سنتين وتُقسم على 600، ويُضاف إلى ناتج هذا الجزء وحده إعانة المعالين: 10% لفرد، و15% لفردين، و20% لثلاثة فأكثر. والأشهر بعد 1/1/1422هـ تُضرب في المتوسط نفسه وتُقسم على 480. مجموع الجزأين هو المعاش، بحد أعلى 100% من متوسط الأجر وحد أدنى 1,983.75 ريال. مثال التأمينات نفسها: متوسط 10,000 ريال، و72 شهراً قبل 1422هـ و48 بعدها، ويعول 3، فالمعاش بالريال: <span dir="ltr" class="eq">1,200 + 240 + 1,000 = 2,440</span>. أما الرقم النهائي فيحدده سجلك لدى التأمينات.</p></div>
+<div class="qa-body"><p>في النظام الحالي يُقسم اشتراكك إلى جزأين. الأشهر قبل 1/1/1422هـ تُضرب في متوسط أجرك في آخر سنتين وتُقسم على 600، ويُضاف إلى ناتج هذا الجزء وحده إعانة المعالين: 10% لفرد، و15% لفردين، و20% لثلاثة فأكثر. والأشهر بعد 1/1/1422هـ تُضرب في المتوسط نفسه وتُقسم على 480. مجموع الجزأين هو المعاش، بحد أعلى 100% من متوسط الأجر وحد أدنى 1,983.75 ريال. مثال التأمينات نفسها: متوسط 10,000 ريال، و72 شهراً قبل 1422هـ و48 بعدها، ويعول 3، فالمعاش بالريال: <span class="eq-line"><span dir="ltr" class="eq">1,200 + 240 + 1,000 = 2,440</span>.</span> أما الرقم النهائي فيحدده سجلك لدى التأمينات.</p></div>
 </details>
 <details class="qa">
 <summary><h3>كيف أعرف مقدار راتبي التقاعدي؟</h3><svg class="icon chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary>
@@ -488,13 +491,13 @@
 <footer class="site-footer">
 <div class="container footer-grid">
 <div class="footer-about">
-<p class="footer-brand"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" class="logo-bg"/><circle cx="14" cy="17" r="7" class="logo-loop"/><circle cx="21" cy="10" r="3.6" class="logo-node"/></svg><span><bdi>LoopNode</bdi> · حاسبة التقاعد</span></p>
+<p class="footer-brand"><img class="brand-icon" src="img/taqaud.svg" width="40" height="40" alt="شعار حاسبة التقاعد: صقر"><span>حاسبة التقاعد</span></p>
 <p>موقع مستقل غير تابع للمؤسسة العامة للتأمينات الاجتماعية ولا لأي جهة حكومية. النتائج تقديرية للمساعدة على الفهم فقط.</p>
 <p class="footer-checked">آخر تحقق من المصادر الرسمية: <bdi>29/9/2026م</bdi>.</p>
 </div>
 <div class="footer-nav">
 <p class="footer-links"><a href="./about.html">عن الموقع</a> · <a href="./privacy.html">سياسة الخصوصية</a> · <a href="./contact.html">تواصل معنا</a></p>
-<p>من أدوات <a href="https://loopnode.live/" rel="noopener"><bdi>LoopNode</bdi></a> المستقلة.</p>
+<p class="footer-by"><a class="loopnode-badge" href="https://loopnode.live/" rel="noopener"><img src="img/loopnode-favicon.svg" width="20" height="20" alt="شعار LoopNode"><span>من أدوات <bdi>LoopNode</bdi> المستقلة</span></a></p>
 </div>
 </div>
 <div class="container footer-base">

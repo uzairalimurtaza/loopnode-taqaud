@@ -260,42 +260,18 @@ bdi {
 .brand:hover {
   color: var(--text);
 }
-.logo-mark {
+.brand-icon {
+  display: block;
   width: 32px;
   height: 32px;
   flex: none;
+  border-radius: 8px;
 }
-.logo-bg {
-  fill: var(--accent);
-}
-.logo-loop {
-  fill: none;
-  stroke: var(--on-accent);
-  stroke-width: 3;
-}
-.logo-node {
-  fill: var(--on-accent);
-  stroke: var(--accent);
-  stroke-width: 2;
-}
-.wordmark {
-  font-family: "Inter", system-ui, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: -0.01em;
-}
+/* icons v3: the header leads with the falcon + the tool name (LoopNode is credited in the footer) */
 .brand-tool {
-  display: none;
-  color: var(--muted);
-  font-size: 15px;
-  font-weight: 500;
-  padding-inline-start: 10px;
-  border-inline-start: 1px solid var(--border-strong);
-}
-@media (min-width: 720px) {
-  .brand-tool {
-    display: inline;
-  }
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 .site-header nav ul {
   list-style: none;
@@ -334,9 +310,6 @@ bdi {
   .site-header nav a {
     padding: 0 7px;
     font-size: 14px;
-  }
-  .wordmark {
-    display: none;
   }
 }
 
@@ -1461,10 +1434,6 @@ tr.match td:first-child {
   color: var(--text);
   font-weight: 600;
 }
-.footer-brand .logo-mark {
-  width: 28px;
-  height: 28px;
-}
 .footer-links a {
   color: var(--text);
 }
@@ -1743,14 +1712,7 @@ fieldset.has-error,
 /* mobile header: tool name next to the logo (the brand link already goes home, so the first nav item hides) */
 @media (max-width: 719px) {
   .brand-tool {
-    display: inline;
-    border: 0;
-    padding: 0;
-    color: var(--text);
-    font-weight: 600;
-  }
-  .wordmark {
-    display: none;
+    font-size: 16px;
   }
   .site-header nav li:first-child {
     display: none;
@@ -1816,9 +1778,6 @@ fieldset.has-error,
 .site-header .brand-tool,
 .site-header nav a {
   color: var(--v2-ink);
-}
-.site-header .brand-tool {
-  border-color: color-mix(in srgb, var(--v2-ink) 30%, transparent);
 }
 .site-header nav a:hover {
   background: color-mix(in srgb, #ffffff 35%, transparent);
@@ -3297,12 +3256,32 @@ fieldset.has-error,
 .site-footer .footer-brand {
   color: #ffffff;
 }
-.site-footer .logo-mark,
-.footer-brand .logo-mark {
-  --accent: #3ddbb0;
-  --on-accent: #07352b;
+.site-footer .brand-icon {
   width: 40px;
   height: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.14);
+}
+/* icons v3: "a LoopNode tool" — the small LoopNode mark in a pill, linking to the hub */
+.site-footer .loopnode-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 8px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.08);
+  border: 1px solid rgb(255 255 255 / 0.18);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.site-footer .loopnode-badge:hover {
+  background: rgb(255 255 255 / 0.14);
+  color: #ffffff;
+}
+.loopnode-badge img {
+  display: block;
+  border-radius: 5px;
 }
 .footer-links {
   font-size: 16px;
@@ -3600,4 +3579,88 @@ fieldset.has-error,
 }
 .table-card .fine {
   max-width: calc(68ch + 44px); /* + its 22px side paddings */
+}
+
+/* ---------- Verification 1 (2026-09-30) ---------- */
+/* #1 the official tables show every row (no inner scroll that hid the highlighted row); the link lands on the row */
+.table-card .table-wrap {
+  max-height: none;
+}
+#age-table-match,
+#early-table-match {
+  scroll-margin-top: 120px;
+}
+/* #2 related-tool cards: the English domain and title start at the RTL edge like the Arabic text and the arrow */
+.related-card .rel-host,
+.related-card [dir="ltr"] {
+  text-align: right;
+}
+/* #3 the hero illustration sits at the bottom of the copy column and bleeds to the hero's bottom edge */
+@media (min-width: 960px) {
+  .hero.v2 .hero-grid {
+    align-items: stretch;
+  }
+  .hero-copy-col {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-art-wrap {
+    margin-top: auto;
+    margin-bottom: -56px;
+    padding-top: 24px;
+    max-width: 400px;
+  }
+  .widget {
+    align-self: start;
+  }
+}
+/* #4 formula + its sentence's full stop on one line (the formula keeps its own LTR block) */
+.qa-body .eq-line {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+/* NIT: timeline connectors always reach the next step */
+.timeline li {
+  padding-bottom: 20px;
+}
+.timeline li::after {
+  top: 38px;
+  bottom: -2px;
+}
+/* NIT: an odd last limit spans the row */
+@media (min-width: 900px) {
+  .limits li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    /* the tile fills the row; its text keeps the 68ch line length (54px = the icon side's padding) */
+    padding-inline-end: max(16px, calc(100% - 68ch - 54px));
+  }
+}
+/* NIT: the result's gold circle would sit under the long coverage chip on phones */
+@media (max-width: 599px) {
+  .result-hero::after {
+    display: none;
+  }
+}
+/* NIT: equal heights — notes beside the empty result (sticky beside a real one), About cards, Privacy rows */
+@media (min-width: 960px) {
+  .tool .notes {
+    align-self: stretch;
+  }
+  .tool-grid:has(#result > .empty) .notes-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .tool-grid:has(#result .result-content) .notes-card {
+    position: sticky;
+    top: 88px;
+  }
+}
+@media (min-width: 860px) {
+  .page-grid,
+  .policy-grid {
+    align-items: stretch;
+  }
 }
