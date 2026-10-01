@@ -3160,7 +3160,9 @@ fieldset.has-error,
   color: #0e2a24;
 }
 .rel-hub,
-.rel-hub:hover {
+.rel-hub:hover,
+.rel-guide,
+.rel-guide:hover {
   background-color: #ffffff;
   background-image:
     radial-gradient(260px 160px at 12% 0%, rgb(79 70 229 / 0.14), transparent 70%),
@@ -3168,33 +3170,42 @@ fieldset.has-error,
   border-color: #e0e7ff;
   color: #1e1b4b;
 }
-.rel-hub .rel-host {
+.rel-hub .rel-host,
+.rel-guide .rel-host {
   color: #4b5563;
 }
-.rel-hub .related-name {
+.rel-hub .related-name,
+.rel-guide .related-name {
   color: #4338ca;
 }
-.rel-hub .related-desc {
+.rel-hub .related-desc,
+.rel-guide .related-desc {
   color: #374151;
 }
-.rel-hub .rel-go {
+.rel-hub .rel-go,
+.rel-guide .rel-go {
   background: #4f46e5;
   color: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
   .rel-hub,
-  .rel-hub:hover {
+  .rel-hub:hover,
+  .rel-guide,
+  .rel-guide:hover {
     background-color: #16143d;
     border-color: #312e81;
     color: #e0e7ff;
   }
-  .rel-hub .rel-host {
+  .rel-hub .rel-host,
+  .rel-guide .rel-host {
     color: #c7d2fe;
   }
-  .rel-hub .related-name {
+  .rel-hub .related-name,
+  .rel-guide .related-name {
     color: #a5b4fc;
   }
-  .rel-hub .related-desc {
+  .rel-hub .related-desc,
+  .rel-guide .related-desc {
     color: #e0e7ff;
   }
   .rel-car {
@@ -3671,8 +3682,9 @@ fieldset.has-error,
 .ad-slot:not(.is-live) {
   display: none;
 }
-/* #5 the result says when the retirement date has already passed */
-.reached {
+/* #5 the result says when the retirement date has already passed; SEO pass 1 (T-5): .time-left says how long is left */
+.reached,
+.time-left {
   display: flex;
   align-items: flex-start;
   gap: 8px;
@@ -3684,7 +3696,8 @@ fieldset.has-error,
   font-weight: 600;
   font-size: 15px;
 }
-.reached .icon {
+.reached .icon,
+.time-left .icon {
   margin-top: 3px;
   color: var(--v2-gold);
 }
@@ -3776,4 +3789,11 @@ fieldset.has-error,
   .widget .stepper input {
     padding-inline: 4px;
   }
+}
+
+/* SEO pass 1 (T-5): the time left until the statutory date in the widget preview (the result uses .time-left, beside .reached) */
+.preview-left {
+  margin: 8px 0 0;
+  font-size: 16px;
+  font-weight: 700;
 }
