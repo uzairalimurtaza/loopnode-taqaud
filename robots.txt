@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://taqaud.loopnode.live/sitemap.xml
